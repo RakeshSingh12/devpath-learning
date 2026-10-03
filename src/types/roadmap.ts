@@ -1,0 +1,1 @@
+export type Topic={id:string;title:string;description?:string;children?:Topic[]}; export type Roadmap={slug:string;title:string;category:"Role"|"Skill";level:string;duration:string;description:string;accent:string;topics:Topic[]}; export type ProgressMap=Record<string,boolean>;

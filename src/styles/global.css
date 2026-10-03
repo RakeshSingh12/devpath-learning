@@ -1,0 +1,678 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #e9ebf2;
+  background: #10131b;
+  --green: #63d6b0;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(ellipse at 50% -15%, #1c2530 0, transparent 55%), #10131b;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+.app {
+  min-height: 100vh;
+}
+.topbar {
+  height: 68px;
+  border-bottom: 1px solid #252a35;
+  display: flex;
+  align-items: center;
+  padding: 0 max(5vw, 24px);
+  gap: 45px;
+  background: #10131bd9;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font: 700 19px "Space Grotesk";
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  color: #10131b;
+  background: var(--green);
+}
+.brand-dot {
+  color: var(--green);
+}
+nav {
+  display: flex;
+  gap: 24px;
+  color: #a8adba;
+  font-size: 13px;
+}
+nav a:hover {
+  color: white;
+}
+.top-cta {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  border: 1px solid #343a48;
+  background: #1a1f2a;
+  border-radius: 8px;
+  padding: 9px 13px;
+  font-size: 12px;
+}
+.hero {
+  text-align: center;
+  padding: 85px 20px 60px;
+}
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+  color: var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.eyebrow.muted {
+  color: #7f8798;
+}
+.hero h1,
+.roadmap-hero h1,
+.not-found h1 {
+  font: 600 clamp(40px, 6vw, 66px)/1.08 "Space Grotesk";
+  letter-spacing: -2.8px;
+  margin: 22px 0 16px;
+}
+.hero h1 span {
+  color: var(--green);
+}
+.hero-copy {
+  max-width: 540px;
+  margin: auto;
+  color: #a1a7b5;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 25px;
+  background: var(--green);
+  color: #102019;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 12px 17px;
+  border-radius: 8px;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  margin-top: 45px;
+}
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hero-stats strong {
+  font: 600 19px "Space Grotesk";
+}
+.hero-stats span {
+  font-size: 11px;
+  color: #9299aa;
+}
+.hero-stats i {
+  height: 30px;
+  width: 1px;
+  background: #343946;
+}
+.section {
+  max-width: 1160px;
+  margin: auto;
+  padding: 40px 24px 70px;
+}
+.section-heading,
+.content-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+}
+.section-heading h2,
+.content-heading h2 {
+  font: 600 26px "Space Grotesk";
+  margin: 9px 0 5px;
+}
+.section-heading p,
+.content-heading p {
+  font-size: 13px;
+  color: #9299aa;
+  margin: 0;
+}
+.result-count {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a5acba;
+  font-size: 12px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 26px 0 20px;
+}
+.searchbox {
+  height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 13px;
+  border: 1px solid #303644;
+  background: #171b25;
+  border-radius: 8px;
+  color: #838b9c;
+  width: min(390px, 100%);
+}
+.searchbox input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #e9ebf2;
+  width: 100%;
+  font-size: 12px;
+}
+.filters {
+  display: flex;
+  gap: 5px;
+  padding: 4px;
+  background: #171b25;
+  border: 1px solid #2a303c;
+  border-radius: 9px;
+}
+.filters button {
+  border: 0;
+  background: transparent;
+  color: #969dad;
+  font-size: 11px;
+  padding: 7px 13px;
+  border-radius: 6px;
+}
+.filters button.active {
+  background: #2a303c;
+  color: #f1f3f8;
+}
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.roadmap-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+  padding: 19px;
+  border: 1px solid #292e3b;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #191e29, #161a23);
+  transition: 0.2s;
+}
+.roadmap-card:hover {
+  border-color: #4b6c65;
+  transform: translateY(-2px);
+}
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.path-icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  color: var(--accent);
+  font-weight: 700;
+}
+.category {
+  font-size: 10px;
+  color: #9299aa;
+  background: #242936;
+  border-radius: 5px;
+  padding: 4px 7px;
+}
+.card-arrow {
+  margin-left: auto;
+  color: #737b8c;
+}
+.roadmap-card h3 {
+  font: 600 16px "Space Grotesk";
+  margin: 18px 0 7px;
+}
+.roadmap-card p {
+  font-size: 11px;
+  color: #979eae;
+  line-height: 1.6;
+  margin: 0 0 17px;
+  flex: 1;
+}
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #a1a8b6;
+  font-size: 10px;
+  margin-bottom: 12px;
+}
+.card-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.progress-track {
+  height: 3px;
+  background: #2c3240;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress-track span,
+.large-progress span {
+  display: block;
+  height: 100%;
+  background: var(--green);
+  border-radius: 5px;
+}
+.progress-caption {
+  display: flex;
+  justify-content: space-between;
+  color: #7e8798;
+  font-size: 9px;
+  margin-top: 7px;
+}
+.empty {
+  text-align: center;
+  border: 1px dashed #343a48;
+  border-radius: 12px;
+  padding: 45px;
+  color: #8f97a7;
+}
+.empty h3 {
+  color: #e7e9ef;
+}
+.empty p {
+  font-size: 12px;
+}
+.empty button,
+.reset-btn {
+  background: #202532;
+  color: #c2c7d2;
+  border: 1px solid #343a48;
+  border-radius: 7px;
+  padding: 8px 11px;
+  font-size: 11px;
+}
+.learning-banner {
+  max-width: 1112px;
+  margin: 0 auto 70px;
+  padding: 20px 23px;
+  border: 1px solid #303a42;
+  border-radius: 12px;
+  background: linear-gradient(100deg, #18241f, #1b2029);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.learning-banner div {
+  flex: 1;
+}
+.learning-banner h3 {
+  font: 600 14px "Space Grotesk";
+  margin: 0 0 4px;
+}
+.learning-banner p {
+  margin: 0;
+  color: #9da5b1;
+  font-size: 11px;
+}
+.learning-banner a {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+}
+.footer {
+  border-top: 1px solid #252a35;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px max(5vw, 24px);
+  color: #707888;
+  font-size: 10px;
+}
+.roadmap-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 35px 24px 70px;
+}
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #a5acba;
+  font-size: 12px;
+}
+.roadmap-hero {
+  padding: 43px 0 35px;
+  border-bottom: 1px solid #292e3b;
+}
+.roadmap-kicker {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--green);
+  font-weight: 700;
+}
+.roadmap-hero h1 {
+  font-size: 42px;
+  letter-spacing: -1.8px;
+  margin: 15px 0 10px;
+}
+.roadmap-hero > p {
+  color: #a1a8b6;
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+.detail-meta {
+  display: flex;
+  gap: 22px;
+  margin-top: 20px;
+  color: #9ca4b2;
+  font-size: 11px;
+}
+.detail-meta span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.large-progress {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 23px;
+}
+.large-progress > div {
+  height: 5px;
+  background: #2b3140;
+  border-radius: 5px;
+  overflow: hidden;
+  flex: 1;
+}
+.large-progress strong {
+  font: 600 12px "Space Grotesk";
+  color: var(--green);
+}
+.content-heading {
+  align-items: center;
+  padding: 32px 0 20px;
+}
+.content-heading h2 {
+  font-size: 20px;
+  margin: 0 0 5px;
+}
+.reset-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.topic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.topic-section {
+  display: flex;
+  gap: 13px;
+  padding: 17px;
+  border: 1px solid #292e3b;
+  background: #171b25;
+  border-radius: 10px;
+}
+.step-number {
+  font: 600 11px "Space Grotesk";
+  color: #687184;
+  padding-top: 4px;
+}
+.topic-section-body {
+  flex: 1;
+  min-width: 0;
+}
+.topic-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.check {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 17px;
+  border: 1px solid #596273;
+  border-radius: 5px;
+  background: transparent;
+  color: #102019;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  margin-top: 2px;
+}
+.check.checked {
+  background: var(--green);
+  border-color: var(--green);
+}
+.topic-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  padding: 0;
+  min-width: 0;
+  flex: 1;
+}
+.topic-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e6e9ef;
+}
+.is-done .topic-title {
+  color: #9aa4a9;
+  text-decoration: line-through;
+}
+.topic-description {
+  font-size: 11px;
+  color: #9299aa;
+  line-height: 1.55;
+}
+.expand {
+  background: transparent;
+  border: 0;
+  color: #8b93a2;
+  padding: 0 2px;
+}
+.expand svg {
+  transition: transform 0.2s;
+}
+.expand svg.collapsed {
+  transform: rotate(-90deg);
+}
+.children {
+  margin: 14px 0 0 9px;
+  padding-left: 15px;
+  border-left: 1px solid #303644;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.children .topic-title {
+  font-size: 11px;
+  font-weight: 500;
+}
+.children .topic-description {
+  font-size: 10px;
+}
+.bottom-note {
+  font-size: 10px;
+  color: #727b8b;
+  margin-top: 22px;
+}
+.not-found {
+  text-align: center;
+  padding: 110px 20px;
+}
+.not-found h1 {
+  font-size: 38px;
+}
+.not-found p {
+  color: #9ba2b0;
+  font-size: 13px;
+}
+.footer {
+  gap: 15px;
+}
+@media (max-width: 900px) {
+  .roadmap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .learning-banner {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .topbar {
+    height: 60px;
+    padding: 0 17px;
+    gap: 20px;
+  }
+  nav {
+    display: none;
+  }
+  .top-cta {
+    font-size: 0;
+    padding: 9px;
+  }
+  .hero {
+    padding: 65px 20px 45px;
+  }
+  .hero h1 {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+  .hero-copy {
+    font-size: 13px;
+  }
+  .hero-stats {
+    gap: 13px;
+    margin-top: 35px;
+  }
+  .hero-stats strong {
+    font-size: 16px;
+  }
+  .hero-stats span {
+    font-size: 9px;
+  }
+  .hero-stats i {
+    height: 25px;
+  }
+  .section {
+    padding: 35px 17px 50px;
+  }
+  .section-heading h2 {
+    font-size: 23px;
+  }
+  .toolbar {
+    flex-direction: column;
+  }
+  .searchbox {
+    width: 100%;
+  }
+  .filters {
+    align-self: flex-start;
+  }
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+  .learning-banner {
+    margin: 0 17px 45px;
+    flex-wrap: wrap;
+  }
+  .learning-banner a {
+    margin-left: 5px;
+  }
+  .footer {
+    padding: 17px;
+    flex-direction: column;
+  }
+  .roadmap-page {
+    padding: 25px 17px 55px;
+  }
+  .roadmap-hero {
+    padding: 35px 0 28px;
+  }
+  .roadmap-hero h1 {
+    font-size: 34px;
+  }
+  .detail-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .content-heading {
+    align-items: flex-start;
+  }
+  .content-heading h2 {
+    font-size: 18px;
+  }
+  .content-heading p {
+    max-width: 260px;
+    line-height: 1.5;
+  }
+  .reset-btn {
+    white-space: nowrap;
+    padding: 7px;
+  }
+  .topic-section {
+    padding: 14px 11px;
+    gap: 9px;
+  }
+  .children {
+    margin-left: 5px;
+    padding-left: 12px;
+  }
+}
