@@ -1,36 +1,87 @@
 # DevPath Complete
 
-Modular React + TypeScript learning roadmap app. Features searchable paths, Role/Skill filters, detail pages, collapsible topic trees, completion tracking, per-roadmap reset, and localStorage persistence.
+**DevPath** is a modern developer learning roadmap application designed to help developers organize their learning journey through structured roadmaps and interactive progress tracking.
 
-## Requirements
-Node.js 20+ and npm.
+## Features
 
-## Run locally
+- **Interactive roadmaps:** Explore structured learning paths for frontend, backend, full-stack, DevOps, React, JavaScript, TypeScript, and SQL.
+- **Search and filters:** Quickly find roadmaps using search and category filters.
+- **Progress tracking:** Mark topics as completed and monitor your learning progress.
+- **Nested learning topics:** Expand and collapse topics to explore detailed learning sections.
+- **Local persistence:** Automatically save progress in your browser.
+- **Responsive UI:** A clean, dark-themed interface optimized for desktop and mobile devices.
+- **Modular architecture:** Organized components, pages, hooks, data, types, utilities, and styles.
+- **Production build:** Built with Vite and TypeScript for optimized frontend builds.
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- React Router
+- Lucide React
+- CSS3
+- Browser Local Storage
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Installation
+
 ```bash
+git clone https://github.com/YOUR_USERNAME/devpath-complete.git
+cd devpath-complete
 npm install
+```
+
+### Run the development server
+
+```bash
 npm run dev
 ```
 
-## Production build
+### Build for production
+
 ```bash
 npm run build
+```
+
+### Preview production build
+
+```bash
 npm run preview
 ```
 
-## Structure
+## Project Structure
+
 ```text
 src/
-  app/                 Routing and app composition
-  components/layout/   Shared shell and navigation
-  components/roadmap/  Cards and interactive topic tree
-  data/                Roadmap content
-  hooks/               Progress state and persistence
-  pages/               Home, detail, and not-found pages
-  styles/              Responsive global styling
-  types/               TypeScript domain types
-  utils/               Topic traversal and progress calculations
-  main.tsx             React entry point
+├── app/
+├── components/
+│   ├── layout/
+│   └── roadmap/
+├── data/
+├── hooks/
+├── pages/
+├── styles/
+├── types/
+├── utils/
+└── main.tsx
 ```
 
-## Production note
-This is a frontend application foundation, not a hosted multi-user service or a complete copy of roadmap.sh. Progress is browser-local. Add backend persistence/authentication, automated tests, monitoring, and reviewed curriculum before offering it as a multi-user production service. Content and styling are independently authored.
+## Future Enhancements
+
+- User authentication
+- Cloud-based progress synchronization
+- More detailed learning content and external resources
+- Roadmap editor
+- Automated testing
+- Deployment automation
+
+## License
+
+Add a license file if you intend to distribute or reuse this project under specific open-source terms.
