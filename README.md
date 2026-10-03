@@ -1,4 +1,4 @@
-# DevPath Complete
+# devpath-learning
 
 **DevPath** is a modern developer learning roadmap application designed to help developers organize their learning journey through structured roadmaps and interactive progress tracking.
 
