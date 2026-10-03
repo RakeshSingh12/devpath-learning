@@ -34,7 +34,7 @@
 
 ```bash
 git clone repo url
-cd devpath-complete
+cd devpath-learning
 npm install
 ```
 
