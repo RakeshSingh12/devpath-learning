@@ -10,7 +10,6 @@ export default defineConfig({
   plugins: [react()],
   base: "/devpath-learning/",
   test: {
-    environment: "jsdom",
-    setupFiles: "./src/test/setup.ts",
+    environment: "node",
   },
 });
