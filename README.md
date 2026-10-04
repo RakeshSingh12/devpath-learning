@@ -101,3 +101,5 @@ Deploy to GitHub Pages
 
 
 Deployment proceeds only if the previous jobs succeed and the workflow is running for a push to main.
+
+Deployed URL- https://rakeshsingh12.github.io/devpath-learning/
