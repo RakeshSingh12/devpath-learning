@@ -85,3 +85,21 @@ src/
 ## License
 
 Add a license file if you intend to distribute or reuse this project under specific open-source terms.
+
+
+
+
+
+
+
+Expected CI/CD flow
+Push to GitHub
+
+Run tests
+npm run test
+Build React app
+npm run build
+Deploy to GitHub Pages
+
+
+Deployment proceeds only if the previous jobs succeed and the workflow is running for a push to main.
